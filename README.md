@@ -1,3 +1,3 @@
-# openfass_func_img2ascii
+# openfaas-tests
 
-Test on OpenFass with a special function that convert an image to a ASCII text
+Test on OpenFass with a special functions (img2ascii, banner, ...)
