@@ -1,2 +1,11 @@
 #!/bin/bash
-convert - jpg:- | jp2a --width=80 -
+#convert - jpg:- | jp2a --width=80 -
+
+cat - > /var/tmp/tmpfile
+echo "################################################################################"
+banner img2ascii
+echo "################################################################################"
+file -b /var/tmp/tmpfile
+echo "################################################################################"
+convert /var/tmp/tmpfile jpg:- | jp2a --width=80 -
+rm -f /var/tmp/tmpfile

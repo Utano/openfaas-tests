@@ -5,7 +5,7 @@ FROM debian
 
 COPY img2ascii /usr/bin/
 RUN apt-get -qq update \
-    && apt-get -qq install curl imagemagick jp2a \
+    && apt-get -qq install curl imagemagick jp2a file sysvbanner \
     && echo "Pulling watchdog binary from Github." \
     && curl -sSL https://github.com/openfaas/faas/releases/download/0.7.3/fwatchdog > /usr/bin/fwatchdog \
     && chmod +x /usr/bin/fwatchdog \
