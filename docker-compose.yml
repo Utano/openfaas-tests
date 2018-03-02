@@ -256,7 +256,22 @@ services:
                     
     # Converts img in ASCII
     img2ascii:
-        image: utano/openfass_func_img2ascii:latest
+        image: utano/openfaas_func_img2ascii:latest
+        labels:
+            function: "true"
+        networks:
+            - functions
+        environment:
+            no_proxy: "gateway"
+            https_proxy: $https_proxy
+        deploy:
+            placement:
+                constraints:
+                    - 'node.platform.os == linux'
+                    
+    # Echo text with banner style
+    banner:
+        image: utano/openfaas-func-banner:latest
         labels:
             function: "true"
         networks:
