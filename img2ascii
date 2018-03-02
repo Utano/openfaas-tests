@@ -1,0 +1,2 @@
+#!/bin/bash
+convert - jpg:- | jp2a --width=80 -
