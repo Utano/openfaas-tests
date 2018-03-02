@@ -255,7 +255,7 @@ services:
                     - 'node.platform.os == linux'
                     
     # Converts img in ASCII
-    markdown:
+    img2ascii:
         image: utano/openfass_func_img2ascii:latest
         labels:
             function: "true"
