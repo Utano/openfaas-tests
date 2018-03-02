@@ -256,7 +256,7 @@ services:
                     
     # Converts img in ASCII
     img2ascii:
-        image: utano/openfaas_func_img2ascii:latest
+        image: utano/openfaas-func-img2ascii:latest
         labels:
             function: "true"
         networks:
